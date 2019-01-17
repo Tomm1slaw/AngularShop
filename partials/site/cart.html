@@ -1,0 +1,67 @@
+<form  id="paypalForm" name="myForm" ng-submit="setOrder($event)" action="https://www.paypal.com/cgi-bin/webscr" method="post">
+   <div class="container">
+      <div class="row">
+         <div class="col-sm-12">
+
+            <div ng-if="alert" class="alert alert-{{alert.type}}">{{alert.msg}}</div>
+
+            <div class="alert alert-info" ng-if="!cart.length && alert.type != 'success'">Koszyk jest pusty</div>
+
+            <div ng-if="cart.length">
+               <table class="table table-hover">
+                  <thead>
+                     <tr>
+                        <th>Nazwa</th>
+                        <th>Waga</th>
+                        <th>Ilość</th>
+                        <th>Cena</th>
+                        <th>Razem</th>
+                        <th>Usuń</th>
+                     </tr>
+                  </thead>
+                  <tbody>
+                     <tr ng-repeat="item in cart">
+                        <td>{{ item.name }}</td>
+                        <td>{{ item.weight }}</td>
+                        <td>
+                           <div class="form-group">
+                              <input name="input{{$index}}" class="form-control" type="number" ng-model="item.qty" min="1" max="20" required>
+                           </div>
+                           <span class="text-danger" ng-show="myForm.input{{$index}}.$error.required">Podaj ilość</span>
+                           <span class="text-danger" ng-show="myForm.input{{$index}}.$error.number">Tylko cyfry</span>
+                           <span class="text-danger" ng-show="myForm.input{{$index}}.$error.max">Nie ma tyle...</span>
+                        </td>
+                        <td>{{ item.price | number: 2 }} zł</td>
+                        <td>
+                           <strong>{{ item.qty * item.price | number : 2 }} zł</strong>
+                        </td>
+                        <td><button ng-click="removeItem($index)" class="btn btn-danger btn-xs"><strong>&times;</strong></button></td>
+                     </tr>
+                     <tr>
+                        <td colspan="5"></td>
+                        <td>
+                           <strong>{{ total() | number: 2 }} zł</strong>
+                        </td>                        
+                     </tr>
+                  </tbody>
+               </table>
+
+               <input type="hidden" name="cmd" value="_cart">
+               <input type="hidden" name="upload" value="1">
+               <input type="hidden" name="business" value="tsokalski88@gmail.com">
+               <input type="hidden" name="charset" value="utf-8">
+               <input type="hidden" name="currency_code" value="PLN">
+
+               <div ng-repeat="item in cart">
+                  <input type="hidden" name="item_name_{{$index+1}}" value="I{{item.name}}">
+                  <input type="hidden" name="quantity_{{$index+1}}" value="{{item.qty}}">
+                  <input type="hidden" name="amount_{{$index+1}}" value="{{item.price}}">
+               </div>
+
+               <button ng-click="emptyCart()" class="btn btn-danger">Wyczyść koszyk</button>
+               <button type="submit" class="btn btn-primary float-right" ng-disabled="!myForm.$valid">Opłać koszyk</div>
+            </div>
+         </div>
+      </div>
+   </div>     
+</form>

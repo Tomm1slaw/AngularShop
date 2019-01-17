@@ -1,0 +1,27 @@
+<div class="container">
+   <div class="row">
+      <div class="col-sm-12">
+         <div class="card">
+            <div class="card-header">
+               <h2 class="float-right">
+                  <span class="badge badge-warning">{{ product.price | number: 2 }} zł</span>
+               </h2>
+               <h2>
+                  <span class="text-capitalize">{{ product.name }}</span>
+               </h2>
+            </div>
+            <div class="card-body">
+               <h3>
+                  <span class="badge badge-info">Waga: {{ product.weight }} kg</span>
+               </h3>
+               <p>{{ product.desc }}</p>
+
+               <a href="#!/products" class="btn btn-outline-info">Powrót</a>
+               <button ng-click="addToCart( product )" class="btn btn-primary">
+                  Dodaj do koszyka
+               </button>
+            </div>
+         </div>
+      </div>
+   </div>
+</div>

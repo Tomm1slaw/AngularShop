@@ -1,0 +1,36 @@
+<div class="container">
+   <div class="row">
+      <div class="col-sm-6">
+         <input type="text" class="form-control" ng-model="search" placeholder="szukaj" />
+      </div>
+
+      <div class="col-sm-6">
+         <a href="#!admin/product/create" class="btn btn-success float-right">Nowy produkt</a>
+      </div>
+   </div>
+
+   <br />
+
+   <div class="row">
+      <div class="col-sm-12">
+         <div class="card mb-3" ng-repeat="product in products | filter : search">
+            <div class="card-body">
+               <h2>
+                  <span class="text-capitalize">{{ product.name }}</span>
+                  <span class="badge badge-warning badge-pill float-right"
+                     >{{ product.price | number: 2 }} zł / kg
+                  </span>
+               </h2>
+               <br />
+               <span class="badge badge-info badge-pill">waga: {{ product.weight }} kg </span></span><br />
+               {{ product.desc }} <br />
+               <p>&nbsp;</p>
+               <a href="#!admin/product/edit/{{ $index }}" class="btn btn-secondary">Edytuj</a>
+               <button ng-click="delete(product, $index)" class="btn btn-danger float-right">
+                  Usuń
+               </button>
+            </div>
+         </div>
+      </div>
+   </div>
+</div>

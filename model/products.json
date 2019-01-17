@@ -1,0 +1,74 @@
+[
+   {
+      "name": "soups",
+      "weight": 1.87,
+      "desc": "eget odio. Aliquam vulputate ullamcorper magna. Sed eu eros. Nam consequat dolor vitae dolor. Donec fringilla. Donec feugiat metus sit amet ante. Vivamus non lorem vitae odio sagittis semper. Nam",
+      "price": 2.0
+   },
+   {
+      "name": "seafood",
+      "weight": 1.51,
+      "desc": "sit amet, consectetuer adipiscing elit. Etiam laoreet, libero et tristique pellentesque, tellus sem mollis dui, in sodales elit erat vitae risus. Duis a mi fringilla",
+      "price": 9.04
+   },
+   {
+      "name": "salads",
+      "weight": 0.83,
+      "desc": "senectus et netus et malesuada fames ac turpis egestas. Aliquam fringilla cursus purus. Nullam scelerisque neque sed sem egestas blandit. Nam nulla magna, malesuada vel, convallis in, cursus et, eros.",
+      "price": 2.71
+   },
+   {
+      "name": "pasta",
+      "weight": 1.54,
+      "desc": "orci sem eget massa. Suspendisse eleifend. Cras sed leo. Cras vehicula aliquet",
+      "price": 9.52
+   },
+   {
+      "name": "soups",
+      "weight": 1.06,
+      "desc": "mi lorem, vehicula et, rutrum eu, ultrices sit amet, risus. Donec nibh enim, gravida sit amet, dapibus id, blandit at, nisi. Cum",
+      "price": 5.6
+   },
+   {
+      "name": "salads",
+      "weight": 1.78,
+      "desc": "enim. Sed nulla ante, iaculis nec, eleifend non, dapibus rutrum, justo. Praesent luctus. Curabitur egestas nunc sed libero. Proin sed turpis nec mauris blandit mattis.",
+      "price": 3.65
+   },
+   {
+      "name": "stews",
+      "weight": 0.08,
+      "desc": "sit amet, consectetuer adipiscing elit. Etiam laoreet, libero et tristique pellentesque, tellus sem mollis dui, in sodales elit erat vitae",
+      "price": 9.97
+   },
+   {
+      "name": "pasta",
+      "weight": 0.31,
+      "desc": "ut, pellentesque eget, dictum placerat, augue. Sed molestie. Sed id risus quis diam luctus lobortis. Class aptent taciti sociosqu ad litora",
+      "price": 8.27
+   },
+   {
+      "name": "desserts",
+      "weight": 1.44,
+      "desc": "Nullam nisl. Maeprices mlesuda fringilla est. Mauris eu turpis. Nulla aliquet. Proin velit.",
+      "price": 1.13
+   },
+   {
+      "name": "stews",
+      "weight": 1.72,
+      "desc": "facilisis, magna tellus faucibus leo, in lobortis tellus justo sit amet nulla. Donec non justo. Proin non massa non ante bibendum ullamcorper. Duis cursus, diam",
+      "price": 2.33
+   },
+   {
+      "name": "desserts",
+      "weight": 1.22,
+      "desc": "elit erat vitae risus. Duis a mi fringilla mi lacinia mattis. Integer eu lacus. Quisque imperdiet,",
+      "price": 9.67
+   },
+   {
+      "name": "cereals",
+      "weight": 0.38,
+      "desc": "eu dolor egestas rhoncus. Proin nisl sem, consequat nec, mollis vitae, posuere at, velit. Cras lorem lorem, luctus ut, pellentesque eget, dictum placerat, augue.",
+      "price": 2.34
+   }
+]
