@@ -11,7 +11,7 @@ controllersSite.controller('siteProducts', [
    function($scope, $http, cartSrv) {
       $http({
          method: 'GET',
-         url: '/model/products.json'
+         url: 'model/products.json'
       })
          .then(function(response) {
             $scope.products = response.data;
@@ -34,7 +34,7 @@ controllersSite.controller('siteProduct', [
    function($scope, $http, $routeParams, cartSrv) {
       $http({
          method: 'GET',
-         url: '/model/products.json'
+         url: 'model/products.json'
       })
          .then(function(response) {
             var products = response.data;
@@ -58,7 +58,7 @@ controllersSite.controller('siteOrders', [
    function($scope, $http) {
       $http({
          method: 'GET',
-         url: '/model/orders.json'
+         url: 'model/orders.json'
       })
          .then(function(response) {
             $scope.orders = response.data;

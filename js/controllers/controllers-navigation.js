@@ -9,9 +9,9 @@ controllersNavigation.controller('navigation', [
    function($scope, $location, cartSrv) {
       $scope.navigation = function() {
          if (/^\/admin/.test($location.path())) {
-            return '/partials/admin/navigation.html';
+            return 'partials/admin/navigation.html';
          } else {
-            return '/partials/site/navigation.html';
+            return 'partials/site/navigation.html';
          }
       };
 

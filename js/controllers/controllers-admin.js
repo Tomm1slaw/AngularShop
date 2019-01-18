@@ -10,7 +10,7 @@ controllersAdmin.controller('products', [
    function($scope, $http) {
       $http({
          method: 'GET',
-         url: '/model/products.json'
+         url: 'model/products.json'
       })
          .then(function(response) {
             $scope.products = response.data;
@@ -36,7 +36,7 @@ controllersAdmin.controller('productEdit', [
    function($scope, $http, $routeParams, FileUploader) {
       $http({
          method: 'POST',
-         url: '/model/products.json'
+         url: 'model/products.json'
       })
          .then(function(response) {
             var products = response.data;
@@ -88,7 +88,7 @@ controllersAdmin.controller('users', [
    function($scope, $http) {
       $http({
          method: 'GET',
-         url: '/model/users.json'
+         url: 'model/users.json'
       })
          .then(function(response) {
             $scope.users = response.data;
@@ -113,7 +113,7 @@ controllersAdmin.controller('userEdit', [
    function($scope, $http, $routeParams) {
       $http({
          method: 'POST',
-         url: '/model/users.json'
+         url: 'model/users.json'
       })
          .then(function(response) {
             var users = response.data;
@@ -149,7 +149,7 @@ controllersAdmin.controller('orders', [
    function($scope, $http) {
       $http({
          method: 'GET',
-         url: '/model/orders.json'
+         url: 'model/orders.json'
       })
          .then(function(response) {
             $scope.orders = response.data;
